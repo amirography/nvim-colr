@@ -11,9 +11,8 @@ vim.g.colors_name = 'forest'
 
 local text        = { '#505050', 235, 'black' }
 local dimgray        = { '#696969', 244, 'gray' }
-local gray_dark   = { '#D0D8D0', 236, 'darkgrey' }
-local gray_light  = { '#696969', 250, 'gray' }
-local white       = { '#9B92CF', 231, 'white' }
+local highlightlow   = { '#D0D8D0', 236, 'darkgrey' }
+local mystery       = { '#9B92CF', 231, 'white' }
 
 local tan = { '#D8A838', 221, 'yellow' }
 
@@ -44,7 +43,7 @@ local purple       = { '#9B92CF', 171, 'magenta' }
 local purple_light = { '#BBB5DF', 133, 'darkmagenta' }
 
 -- This is the only highlight that must be defined separately.
-local highlight_group_normal = { fg = gray_light }
+local highlight_group_normal = { fg = dimgray }
 
 -- This is where the rest of your highlights should go.
 local highlight_groups = {
@@ -94,14 +93,14 @@ local highlight_groups = {
 	SpecialChar = { fg = red_light, style = 'italic' },
 	SpecialKey = 'Character',
 	Tag = 'Underlined',
-	Delimiter = { fg = white },
+	Delimiter = { fg = mystery },
 	SpecialComment = { fg = dimgray, style = { 'bold', 'nocombine' } },
 	Debug = 'WarningMsg',
 
 	--[[ 4.1.7. Help Syntax]]
 	Underlined = { fg = turqoise, style = 'underline' },
 	Ignore = { fg = dimgray },
-	Error = { fg = white, bg = red_dark, style = 'bold' },
+	Error = { fg = mystery, bg = red_dark, style = 'bold' },
 	Todo = { fg = text, bg = yellow, style = 'bold' },
 	Hint = { fg = text, bg = magenta, style = 'bold' },
 	Info = { fg = text, bg = pink_light, style = 'bold' },
@@ -120,11 +119,11 @@ local highlight_groups = {
 	TabLineFill = function(self) return { fg = self.TabLine.bg, bg = text } end,
 	TabLineSel = function(self) return { fg = self.TabLine.fg, bg = highlight_group_normal.bg } end,
 	Title = { style = 'bold' },
-	VertSplit = { fg = white },
+	VertSplit = { fg = mystery },
 
 	--[[ 4.2.3. Conditional Line Highlighting]]
 	Conceal         = 'NonText',
-	CursorLine      = { bg = gray_dark },
+	CursorLine      = { bg = highlightlow },
 	CursorLineNr    = function(self) return { fg = pink, bg = self.LineNr.bg } end,
 	debugBreakpoint = 'ErrorMsg',
 	debugPC         = 'ColorColumn',
@@ -134,10 +133,10 @@ local highlight_groups = {
 	VisualNOS       = { bg = dimgray },
 
 	--[[ 4.2.4. Popup Menu]]
-	Pmenu      = { fg = highlight_group_normal.fg, bg = gray_dark },
+	Pmenu      = { fg = highlight_group_normal.fg, bg = highlightlow },
 	PmenuSbar  = { bg = dimgray },
-	PmenuSel   = { fg = text, bg = gray_light },
-	PmenuThumb = { bg = white },
+	PmenuSel   = { fg = text, bg = dimgray },
+	PmenuThumb = { bg = mystery },
 	WildMenu   = 'PmenuSel',
 
 	--[[ 4.2.5. Folds]]
@@ -153,7 +152,7 @@ local highlight_groups = {
 	--[[ 4.2.7. Searching]]
 	IncSearch  = { style = 'inverse' },
 	MatchParen = { fg = green, style = { 'bold', 'underline' } },
-	Search     = { style = { 'underline', color = white } },
+	Search     = { style = { 'underline', color = mystery } },
 
 	--[[ 4.2.8. Spelling]]
 	SpellBad   = { style = { 'undercurl', color = red } },
@@ -219,7 +218,7 @@ local highlight_groups = {
 	--[[ 4.2.12. Cursor ]]
 	Cursor       = { style = 'inverse' },
 	CursorIM     = 'Cursor',
-	CursorColumn = { bg = gray_dark },
+	CursorColumn = { bg = highlightlow },
 
 	--[[ 4.2.13. Misc ]]
 	Directory = { fg = ice, style = 'bold' },
@@ -691,7 +690,7 @@ local highlight_groups = {
 
 	BufferVisible       = 'TabLine',
 	BufferVisibleIndex  = function(self) return { fg = self.InfoMsg.fg, bg = self.BufferVisible.bg } end,
-	BufferVisibleMod    = function(self) return { fg = white, bg = self.BufferVisible.bg, style = 'italic' } end,
+	BufferVisibleMod    = function(self) return { fg = mystery, bg = self.BufferVisible.bg, style = 'italic' } end,
 	BufferVisibleSign   = 'BufferVisible',
 	BufferVisibleTarget = function(self)
 		local super = self.BufferVisibleMod
@@ -807,14 +806,14 @@ local terminal_colors = {
 	[6]  = magenta_dark,
 	[7]  = teal,
 	[8]  = dimgray,
-	[9]  = gray_dark,
+	[9]  = highlightlow,
 	[10] = red,
 	[11] = green,
 	[12] = yellow,
 	[13] = turqoise,
 	[14] = purple,
 	[15] = cyan,
-	[16] = gray_light
+	[16] = dimgray
 }
 
 require(vim.g.colors_name)(
