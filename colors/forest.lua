@@ -23,19 +23,19 @@ local red_dark  = { '#CD5C5C', 124, 'darkred' }
 local red_light = { '#E4A9A9', 205, 'red' }
 
 local orange       = { '#D8A838', 208, 'darkyellow' }
-local orange_light = { '#e1bd67', 214, 'darkyellow' }
+local orange_light = { '#E1BD67', 214, 'darkyellow' }
 
-local yellow = { '#daa520', 227, 'yellow' }
+local yellow = { '#D8A838', 227, 'yellow' }
 
 local green_dark  = { '#556B2F', 113, 'darkgreen' }
 local green       = { '#2E8B57', 46, 'green' }
 local green_light = { '#8DB14F', 120, 'green' }
 local turqoise    = { '#61BFB5', 48, 'green' }
 
-local blue = { '#6495ED', 63, 'darkblue' }
-local cyan = { '#61BFB5', 80, 'cyan' }
+local blue = { '#5f9ea0', 63, 'darkblue' }
+local cyan = { '#5f9ea0', 80, 'cyan' }
 local ice  = { '#61BFB5', 111, 'cyan' }
-local teal = { '#6495ED', 75, 'blue' }
+local teal = { '#5f9ea0', 75, 'blue' }
 
 local magenta      = { '#DDA0DD', 168, 'magenta' }
 local magenta_dark = { '#DA70D6', 126, 'darkmagenta' }
@@ -44,119 +44,6 @@ local pink_light   = { '#E4A9A9', 217, 'white' }
 local purple       = { '#9B92CF', 171, 'magenta' }
 local purple_light = { '#BBB5DF', 133, 'darkmagenta' }
 
---[[ Step 4: highlights
-	You can define highlight groups like this:
-
-```lua
-	<highlight group name> = {
-		-- The color for the background, or `nil`
-		bg = <color>,
-
-		-- The color for the foreground, or `nil`
-		fg = <color>
-
-		-- The |highlight-blend| value, if one is desired.
-		[, blend = <integer>]
-
-		-- Style can be 'bold', 'italic', and more. See |attr-list| for more information.
-		-- It can also have a color, and/or multiple <cterm>s.
-		[, style = <cterm>|{<cterm> (, <cterm>) [color=<color>]} ]
-	}
-```
-
-	You can also link one highlight group to another:
-
-```lua
-	<highlight group name> = '<highlight group name>'
-```
-	____________________________________________________________________________
-
-	Here is an example to define `SpellBad` and then link some new group
-	`SpellWorse` to it:
-
-```lua
-	SpellBad = { -- ← name of the highlight group
-		bg=nil, -- background color
-		fg=red, -- foureground color
-		style={ -- the style
-			'undercurl', -- undercurl (squiggly line)
-			color=red -- the color of the undercurl
-		}
-	},
-	SpellWorse = 'SpellBad'
-```
-
-	If you weren't satisfied with undercurl, and also wanted another effect, you can
-	add another one below 'undercurl' and it will be applied as well:
-
-```lua
-	SpellBad = { -- ← name of the highlight group
-		bg=nil, -- background color
-		fg=red, -- foureground color
-		style={ -- the style
-			'undercurl', -- undercurl (squiggly line)
-			'standout'
-			color=red -- the color of the undercurl
-		}
-	}
-```
-	____________________________________________________________________________
-
-	If you want to create a colorscheme that is responsive to the user's
-	'background' setting, you can specify special `light` and `dark` keys to
-	define how each group should be highlighted in each case.
-
-```lua
-	SpellBad = {
-		bg=nil,
-		dark={fg=white},
-		light={fg=black},
-		style={'undercurl', color=red}
-	}
-```
-
-	Whenever the user changes their 'background' setting, the settings inside of
-	whichever key is relevant will be loaded.
-	____________________________________________________________________________
-
-	You can add any custom highlight group to the standard list below but you
-	shouldn't remove any if you want a working colorscheme. Most of them are
-	described under |highlight-default|, some from |group-name|, and others from
-	common syntax groups.  Both help sections are good reads.
-	____________________________________________________________________________
-
-	If you want to inherit a specific attribute of another highlight group, you
-	can do the following:
-
-```lua
-	SpellBad = function(self)
-		local inherited_style = self.SpellRare.style
-		inherited_style.color = red
-
-		return {
-			bg=nil,
-			fg=nil,
-			style=inherited_style
-		}
-	end
-```
-
-	The function will be executed by |highlite| and transformed into the
-	expected result.
-	____________________________________________________________________________
-
-	NOTE: |Replace-mode| will probably be useful here.
-
-	NOTE: /As long as you do not remove any highlight groups or colors/, you can
-	      safely ignore any highlight groups that are `link`ed to others.
-
-	      For example, programming languages almost exclusively link to the 1st
-	      and 2nd sections, so as long as you define everything there you will
-	      automatically be defining the rest of the highlights, which is one of
-	      the benefits of using this template.
-]]
-
---[[ These are the ones you should edit. ]]
 -- This is the only highlight that must be defined separately.
 local highlight_group_normal = { fg = gray_light }
 
@@ -186,7 +73,7 @@ local highlight_groups = {
 	Repeat      = { fg = turqoise, style = 'italic' },
 	Label       = { fg = pink, style = 'bold' },
 	Operator    = { fg = green, style = 'bold' },
-	Keyword     = { fg = teal },
+	Keyword     = { fg = ice, style = 'bold' },
 	Exception   = { fg = red_light, style = 'bold' },
 	Noise       = 'Delimiter',
 
@@ -910,41 +797,7 @@ local highlight_groups = {
 	MiniJump = 'MiniJump2dSpot',
 }
 
---[[ Step 5: Terminal Colors
-	Define the color palette used by :terminal when in GUI Vim
-	or in TUI Vim when 'termguicolors' is enabled. If this list
-	is empty or if it doesn't contain exactly 16 items, the corresponding
-	Vim variable won't be set.
 
-	The expected values are colors defined in step 3.
-
-	Terminal emulators use a basic palette of 16 colors that can be
-	addressed by CLI and TUI tools via their name or their index, from
-	0 to 15. The list is not really standardized but it is generally
-	assumed to look like this:
-
-	 | Index  | Name          |
-	 |:------:|:-------------:|
-	 | 1      | black         |
-	 | 2      | darkred       |
-	 | 3      | darkgreen     |
-	 | 4      | darkyellow    |
-	 | 5      | darkblue      |
-	 | 6      | darkmagenta   |
-	 | 7      | darkcyan      |
-	 | 8      | gray          |
-	 | 9      | darkgray      |
-	 | 10     | red           |
-	 | 11     | green         |
-	 | 12     | yellow        |
-	 | 13     | blue          |
-	 | 14     | magenta       |
-	 | 15     | cyan          |
-	 | 16     | white         |
-
-	While you are certainly free to make colors 0 to 7 shades of blue,
-	this will inevitably cause usability issues so… be careful.
-]]
 
 local terminal_colors = {
 	[1]  = black,
@@ -964,66 +817,6 @@ local terminal_colors = {
 	[15] = cyan,
 	[16] = gray_light
 }
-
---[[ Step 5: Sourcing
-	When you wish to load your colorscheme, simply add this folder with a plugin manager
-	and then use `colorscheme <your colorscheme name>`. For example, in my configuration,
-	I source highlite by using `colorscheme highlite`.
-
-	These online resources can help you design your colorscheme:
-
-	1. the xterm palette.
-		* http://upload.wikimedia.org/wikipedia/en/1/15/Xterm_256color_chart.svg
-	2. play with hexadecimal colors right in the address bar (currently down).
-		* http://whatcolor.herokuapp.com/
-	3. similar concept, fuzzier implementation.
-		* http://color.hailpixel.com/
-	4. similar concept, fancier implementation.
-		* http://colourco.de/
-	5. extract a palette from an image.
-		* http://www.colr.org/
-	6. search for 'word', get images and color palettes.
-		* http://colores.manugarri.com/
-	7. user-created palettes.
-		* http://www.colourlovers.com/palettes
-	8. a no-nonsense colorscheme generator.
-		* http://www.pluaang.dk/color+scheme/
-	9. Adobe's fancy colorscheme generator.
-		* https://color.adobe.com/
-	10. The classic 'Color Scheme Designer', rebranded.
-		* http://paletton.com/
-	11. A very smart palette generator.
-		* http://vrl.cs.brown.edu/color
-	12. 'I Made My Own Colour Scheme and You Can Too!'.
-		* https://cmcenroe.me/2018/04/03/colour-scheme.html
-
-	A few things to note:
-
-	* The Windows console (`cmd`) is limited to the 16 so-called 'ANSI' colors but it used to
-			have a few of them interverted which makes numbers impractical. Use color names
-			instead of numbers: :help cterm-colors
-		* The Windows console doesn't do italics, underlines or bolded text;
-			it is limited to normal and reverse. Keep that in mind if you want
-			your colorscheme to be usable in as many environments as possible by as many
-			people as possible.
-		* The Windows TERMINAL, however, is capable of more.
-	* All of the terminal emulators in use these days allow their users to
-		change the 16 so-called 'ANSI' colors. It is also possible on some platforms
-		to change some or all of the 256 colors in the xterm palette. Don't take
-		anything for granted.
-	* When used against a light background, strong colors work better than muted
-		ones. Light or dark doesn't really matters. Also, it is harder to discriminate
-		between two similar colors on a light background.
-	* Both strong and muted colors work well against a dark background. It is also
-		easier to work with similar colors, but dark colors don't work at all.
-	* Use as many text samples as possible. String-heavy languages may look completely
-		different than keyword-heavy ones. This can have an impact on the usability
-		of your colorscheme.
-	* Most terminal emulators and terminal multiplexers currently in use on unix-like
-		systems support 256 colors but they almost always default to a '$TERM' that tells
-		Vim otherwise. Your users will need to make sure their terminal emulator/multiplexer
-		is correctly set up if they want to enjoy the best possible experience.
-]]
 
 require(vim.g.colors_name)(
 	highlight_group_normal,
