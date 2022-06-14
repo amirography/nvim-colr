@@ -10,7 +10,7 @@
 vim.g.colors_name = 'forest'
 
 local text        = { '#505050', 235, 'black' }
-local gray        = { '#696969', 244, 'gray' }
+local dimgray        = { '#696969', 244, 'gray' }
 local gray_dark   = { '#D0D8D0', 236, 'darkgrey' }
 local gray_darker = { '#696969', 239, 'gray' }
 local gray_light  = { '#696969', 250, 'gray' }
@@ -50,7 +50,7 @@ local highlight_group_normal = { fg = gray_light }
 -- This is where the rest of your highlights should go.
 local highlight_groups = {
 	--[[ 4.1. Text Analysis ]]
-	Comment     = { fg = gray, style = 'italic' },
+	Comment     = { fg = dimgray, style = 'italic' },
 	NonText     = { fg = gray_darker },
 	EndOfBuffer = 'NonText',
 	Whitespace  = 'NonText',
@@ -96,12 +96,12 @@ local highlight_groups = {
 	SpecialKey = 'Character',
 	Tag = 'Underlined',
 	Delimiter = { fg = white },
-	SpecialComment = { fg = gray, style = { 'bold', 'nocombine' } },
+	SpecialComment = { fg = dimgray, style = { 'bold', 'nocombine' } },
 	Debug = 'WarningMsg',
 
 	--[[ 4.1.7. Help Syntax]]
 	Underlined = { fg = turqoise, style = 'underline' },
-	Ignore = { fg = gray },
+	Ignore = { fg = dimgray },
 	Error = { fg = white, bg = red_dark, style = 'bold' },
 	Todo = { fg = text, bg = yellow, style = 'bold' },
 	Hint = { fg = text, bg = magenta, style = 'bold' },
@@ -111,12 +111,12 @@ local highlight_groups = {
 	--[[ 4.2... Editor UI  ]]
 	--[[ 4.2.1. Status Line]]
 	StatusLine = { fg = green_light, bg = gray_darker },
-	StatusLineNC = function(self) return { fg = gray, bg = self.StatusLine.bg } end,
+	StatusLineNC = function(self) return { fg = dimgray, bg = self.StatusLine.bg } end,
 	StatusLineTerm = 'StatusLine',
 	StatusLineTermNC = 'StatusLineNC',
 
 	--[[ 4.2.2. Separators]]
-	FloatBorder = { fg = gray },
+	FloatBorder = { fg = dimgray },
 	TabLine = function(self) return { fg = highlight_group_normal.fg, bg = self.StatusLine.bg } end,
 	TabLineFill = function(self) return { fg = self.TabLine.bg, bg = text } end,
 	TabLineSel = function(self) return { fg = self.TabLine.fg, bg = highlight_group_normal.bg } end,
@@ -129,7 +129,7 @@ local highlight_groups = {
 	CursorLineNr    = function(self) return { fg = pink, bg = self.LineNr.bg } end,
 	debugBreakpoint = 'ErrorMsg',
 	debugPC         = 'ColorColumn',
-	LineNr          = { fg = gray },
+	LineNr          = { fg = dimgray },
 	QuickFixLine    = function(self) return { bg = self.StatusLine.bg } end,
 	Visual          = { style = 'inverse' },
 	VisualNOS       = { bg = gray_darker },
@@ -654,7 +654,7 @@ local highlight_groups = {
 
 	--[[ 4.4.5. vim-indent-guides ]]
 	IndentGuidesOdd  = { bg = gray_darker },
-	IndentGuidesEven = { bg = gray },
+	IndentGuidesEven = { bg = dimgray },
 
 	--[[ 4.4.7. NERDTree ]]
 	NERDTreeCWD        = 'Label',
@@ -807,7 +807,7 @@ local terminal_colors = {
 	[5]  = blue,
 	[6]  = magenta_dark,
 	[7]  = teal,
-	[8]  = gray,
+	[8]  = dimgray,
 	[9]  = gray_dark,
 	[10] = red,
 	[11] = green,
