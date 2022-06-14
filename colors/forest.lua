@@ -54,7 +54,7 @@ local gray        = { '#7b7b71', 244, 'gray' }
 local gray_dark   = { '#D0D8D0', 236, 'darkgrey' }
 local gray_darker = { '#7b7b71', 239, 'gray' }
 local gray_light  = { '#7b7b71', 250, 'gray' }
-local white       = { '#505050', 231, 'white' }
+local white       = { '#2e8b57', 231, 'white' }
 
 local tan = { '#D8A838', 221, 'yellow' }
 
