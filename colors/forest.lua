@@ -9,22 +9,22 @@
 
 vim.g.colors_name = 'forest'
 
-local text           = { '#505050', 235, 'black' }
-local dimgray        = { '#696969', 244, 'gray' }
-local highlightlow   = { '#D0D8D0', 236, 'darkgrey' }
-local mystery        = { '#9B92CF', 231, 'white' }
-local wind           = { '#BBB5DF', 133, 'darkmagenta' }
-local gold           = { '#D8A838', 221, 'yellow' }
-local sun            = { '#E1BD67', 214, 'darkyellow' }
-local indianred      = { '#CD5C5C', 203, 'red' }
-local barbiered      = { '#E4A9A9', 205, 'red' }
-local darkolivegreen = { '#556B2F', 113, 'darkgreen' }
-local seagreen       = { '#2E8B57', 46, 'green' }
-local olivegarden    = { '#8DB14F', 120, 'green' }
-local cadetblue      = { '#5f9ea0', 63, 'darkblue' }
-local lightseagreen  = { '#61BFB5', 111, 'cyan' }
-local plum           = { '#DDA0DD', 168, 'magenta' }
-local orchid         = { '#DA70D6', 126, 'darkmagenta' }
+local text           = { '#505050', 59, 'black' }
+local dimgray        = { '#696969', 242, 'brightblack' }
+local highlightlow   = { '#D0D8D0', 151, 'darkwhite' }
+local mystery        = { '#9B92CF', 140, 'darkwhite' }
+local wind           = { '#BBB5DF', 146, 'darkmagenta' }
+local gold           = { '#D8A838', 179, 'yellow' }
+local sun            = { '#E1BD67', 179, 'darkyellow' }
+local indianred      = { '#CD5C5C', 167, 'red' }
+local barbiered      = { '#E4A9A9', 181, 'red' }
+local darkolivegreen = { '#556B2F', 58, 'darkgreen' }
+local seagreen       = { '#2E8B57', 29, 'green' }
+local olivegarden    = { '#8DB14F', 107, 'green' }
+local cadetblue      = { '#5f9ea0', 73, 'darkblue' }
+local lightseagreen  = { '#61BFB5', 73, 'cyan' }
+local plum           = { '#DDA0DD', 176, 'magenta' }
+local orchid         = { '#DA70D6', 176, 'darkmagenta' }
 
 -- This is the only highlight that must be defined separately.
 local highlight_group_normal = { fg = dimgray }
