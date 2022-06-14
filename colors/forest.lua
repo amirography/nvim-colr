@@ -10,10 +10,10 @@
 vim.g.colors_name = 'forest'
 
 local black       = { '#505050', 235, 'black' }
-local gray        = { '#556B2F', 244, 'gray' }
+local gray        = { '#696969', 244, 'gray' }
 local gray_dark   = { '#D0D8D0', 236, 'darkgrey' }
-local gray_darker = { '#556B2F', 239, 'gray' }
-local gray_light  = { '#556B2F', 250, 'gray' }
+local gray_darker = { '#696969', 239, 'gray' }
+local gray_light  = { '#696969', 250, 'gray' }
 local white       = { '#9B92CF', 231, 'white' }
 
 local tan = { '#D8A838', 221, 'yellow' }
