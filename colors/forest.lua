@@ -7,59 +7,19 @@
 	* Canonical URL: https://github.com/romainl/vim-rnb
 ]]
 
---[[ Introduction
-	This template is designed to help Neovim users create their own colorschemes without much effort.
-
-	You will not need any additional tooling to run this file. Just open it in Neovim and follow the instructions.
-
-	The process is divided in five steps:
-	1. [x] Rename the template,
-	2. [x] Edit your colorscheme's information,
-	3. [x] Define your colors,
-	4. [ ] Define your highlight groups and links, and
-	5. [ ] Sourcing your colorscheme.
-]]
-
--- This is the name of your colorscheme which will be used as per |g:colors_name|.
 vim.g.colors_name = 'forest'
 
---[[ Step 3: Colors
-	Next you will define all of the colors that you will use for the color scheme.
-
-	Each one should be made up of three parts:
-
-```lua
-	<color name> = { -- Give each color a distinctive name.
-		'#<hex color code>', -- Hexadecimal color used in GVim/MacVim
-		<16-bit color code>, -- Integer 0–255 used by terminals supporting 256 colors
-		'<ANSI color name>'  -- color name used by less capable color terminals, can be 'darkred',
-		                       'red', 'darkgreen', 'green', 'darkyellow', 'yellow', 'darkblue',
-		                       'blue', 'darkmagenta', 'magenta', 'black', 'darkgrey', 'grey',
-		                       'white'
-	}
-```
-
-	NOTE: See https://gist.github.com/gagbo/7943c9a71cab22b641d2904a6d59ec3a
-	      for a program that can generate 16-bit colors from a Hex code.
-
-	If your colors are defined correctly, the resulting colorscheme is guaranteed
-	to work in GVim (Windows/Linux), MacVim (MacOS), and any properly set up terminal
-	emulator.
-
-	NOTE: |Replace-mode| will probably be useful here.
-]]
-
 local black       = { '#505050', 235, 'black' }
-local gray        = { '#7b7b71', 244, 'gray' }
+local gray        = { '#556B2F', 244, 'gray' }
 local gray_dark   = { '#D0D8D0', 236, 'darkgrey' }
-local gray_darker = { '#7b7b71', 239, 'gray' }
-local gray_light  = { '#7b7b71', 250, 'gray' }
-local white       = { '#2e8b57', 231, 'white' }
+local gray_darker = { '#556B2F', 239, 'gray' }
+local gray_light  = { '#556B2F', 250, 'gray' }
+local white       = { '#9B92CF', 231, 'white' }
 
 local tan = { '#D8A838', 221, 'yellow' }
 
-local red       = { '#be5555', 203, 'red' }
-local red_dark  = { '#987070', 124, 'darkred' }
+local red       = { '#BE5555', 203, 'red' }
+local red_dark  = { '##cd5c5c', 124, 'darkred' }
 local red_light = { '#e4a9a9', 205, 'red' }
 
 local orange       = { '#D8A838', 208, 'darkyellow' }
