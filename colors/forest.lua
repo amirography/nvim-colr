@@ -9,38 +9,22 @@
 
 vim.g.colors_name = 'forest'
 
-local text        = { '#505050', 235, 'black' }
+local text           = { '#505050', 235, 'black' }
 local dimgray        = { '#696969', 244, 'gray' }
 local highlightlow   = { '#D0D8D0', 236, 'darkgrey' }
-local mystery       = { '#9B92CF', 231, 'white' }
-
-local tan = { '#D8A838', 221, 'yellow' }
-
-local red       = { '#BE5555', 203, 'red' }
-local red_dark  = { '#CD5C5C', 124, 'darkred' }
-local red_light = { '#E4A9A9', 205, 'red' }
-
-local orange       = { '#D8A838', 208, 'darkyellow' }
-local orange_light = { '#E1BD67', 214, 'darkyellow' }
-
-local yellow = { '#D8A838', 227, 'yellow' }
-
-local green_dark  = { '#556B2F', 113, 'darkgreen' }
-local green       = { '#2E8B57', 46, 'green' }
-local green_light = { '#8DB14F', 120, 'green' }
-local turqoise    = { '#61BFB5', 48, 'green' }
-
-local blue = { '#5f9ea0', 63, 'darkblue' }
-local cyan = { '#5f9ea0', 80, 'cyan' }
-local ice  = { '#61BFB5', 111, 'cyan' }
-local teal = { '#5f9ea0', 75, 'blue' }
-
-local magenta      = { '#DDA0DD', 168, 'magenta' }
-local magenta_dark = { '#DA70D6', 126, 'darkmagenta' }
-local pink         = { '#E4A9A9', 219, 'magenta' }
-local pink_light   = { '#E4A9A9', 217, 'white' }
-local purple       = { '#9B92CF', 171, 'magenta' }
-local purple_light = { '#BBB5DF', 133, 'darkmagenta' }
+local mystery        = { '#9B92CF', 231, 'white' }
+local wind           = { '#BBB5DF', 133, 'darkmagenta' }
+local gold           = { '#D8A838', 221, 'yellow' }
+local sun            = { '#E1BD67', 214, 'darkyellow' }
+local indianred      = { '#CD5C5C', 203, 'red' }
+local barbiered      = { '#E4A9A9', 205, 'red' }
+local darkolivegreen = { '#556B2F', 113, 'darkgreen' }
+local seagreen       = { '#2E8B57', 46, 'green' }
+local olivegarden    = { '#8DB14F', 120, 'green' }
+local cadetblue      = { '#5f9ea0', 63, 'darkblue' }
+local lightseagreen  = { '#61BFB5', 111, 'cyan' }
+local plum           = { '#DDA0DD', 168, 'magenta' }
+local orchid         = { '#DA70D6', 126, 'darkmagenta' }
 
 -- This is the only highlight that must be defined separately.
 local highlight_group_normal = { fg = dimgray }
@@ -54,43 +38,43 @@ local highlight_groups = {
 	Whitespace  = 'NonText',
 
 	--[[ 4.1.1. Literals]]
-	Constant  = { fg = orange_light },
-	String    = { fg = green_dark },
-	Character = { fg = red_light },
-	Number    = { fg = pink_light },
-	Boolean   = { fg = yellow },
+	Constant  = { fg = sun },
+	String    = { fg = darkolivegreen },
+	Character = { fg = barbiered },
+	Number    = { fg = barbiered },
+	Boolean   = { fg = gold },
 	Float     = 'Number',
 
 	--[[ 4.1.2. Identifiers]]
 	Identifier = { fg = highlight_group_normal.fg },
-	Function = { fg = purple },
+	Function = { fg = mystery },
 
 	--[[ 4.1.3. Syntax]]
-	Statement   = { fg = ice },
-	Conditional = { fg = ice, style = 'italic' },
-	Repeat      = { fg = turqoise, style = 'italic' },
-	Label       = { fg = pink, style = 'bold' },
-	Operator    = { fg = green, style = 'bold' },
-	Keyword     = { fg = ice, style = 'bold' },
-	Exception   = { fg = red_light, style = 'bold' },
+	Statement   = { fg = lightseagreen },
+	Conditional = { fg = lightseagreen, style = 'italic' },
+	Repeat      = { fg = lightseagreen, style = 'italic' },
+	Label       = { fg = barbiered, style = 'bold' },
+	Operator    = { fg = seagreen, style = 'bold' },
+	Keyword     = { fg = lightseagreen, style = 'bold' },
+	Exception   = { fg = barbiered, style = 'bold' },
 	Noise       = 'Delimiter',
 
 	--[[ 4.1.4. Metatextual Information]]
-	PreProc   = { fg = tan },
-	Include   = { fg = green_light, style = 'nocombine' },
-	Define    = { fg = blue, style = 'nocombine' },
-	Macro     = { fg = blue, style = 'italic' },
-	PreCondit = { fg = tan, style = 'italic' },
+	PreProc   = { fg = gold },
+	Include   = { fg = olivegarden, style = 'nocombine' },
+	Define    = { fg = cadetblue, style = 'nocombine' },
+	Macro     = { fg = cadetblue, style = 'italic' },
+	PreCondit = { fg = gold, style = 'italic' },
 
 	--[[ 4.1.5. Semantics]]
-	Type         = { fg = cyan },
-	StorageClass = { fg = orange_light, style = 'bold' },
-	Structure    = { fg = blue, style = 'bold' },
-	Typedef      = { fg = cyan, style = 'italic' },
+	Type         = { fg = cadetblue },
+	StorageClass = { fg = sun, style = 'bold' },
+	Structure    = { fg = cadetblue, style = 'bold' },
+	Typedef      = { fg = cadetblue, style = 'italic' },
 
 	--[[ 4.1.6. Edge Cases]]
-	Special = { fg = magenta, style = 'bold' },
-	SpecialChar = { fg = red_light, style = 'italic' },
+	Special = { fg = plum, style = 'bold' },
+	SpecialChar = { fg = barbiered, style = 'italic' },
 	SpecialKey = 'Character',
 	Tag = 'Underlined',
 	Delimiter = { fg = mystery },
@@ -98,17 +82,17 @@ local highlight_groups = {
 	Debug = 'WarningMsg',
 
 	--[[ 4.1.7. Help Syntax]]
-	Underlined = { fg = turqoise, style = 'underline' },
+	Underlined = { fg = lightseagreen, style = 'underline' },
 	Ignore = { fg = dimgray },
-	Error = { fg = mystery, bg = red_dark, style = 'bold' },
-	Todo = { fg = text, bg = yellow, style = 'bold' },
-	Hint = { fg = text, bg = magenta, style = 'bold' },
-	Info = { fg = text, bg = pink_light, style = 'bold' },
-	Warning = { fg = text, bg = orange, style = 'bold' },
+	Error = { fg = mystery, bg = indianred, style = 'bold' },
+	Todo = { fg = text, bg = gold, style = 'bold' },
+	Hint = { fg = text, bg = plum, style = 'bold' },
+	Info = { fg = text, bg = barbiered, style = 'bold' },
+	Warning = { fg = text, bg = gold, style = 'bold' },
 
 	--[[ 4.2... Editor UI  ]]
 	--[[ 4.2.1. Status Line]]
-	StatusLine = { fg = green_light, bg = dimgray },
+	StatusLine = { fg = olivegarden, bg = dimgray },
 	StatusLineNC = function(self) return { fg = dimgray, bg = self.StatusLine.bg } end,
 	StatusLineTerm = 'StatusLine',
 	StatusLineTermNC = 'StatusLineNC',
@@ -124,7 +108,7 @@ local highlight_groups = {
 	--[[ 4.2.3. Conditional Line Highlighting]]
 	Conceal         = 'NonText',
 	CursorLine      = { bg = highlightlow },
-	CursorLineNr    = function(self) return { fg = pink, bg = self.LineNr.bg } end,
+	CursorLineNr    = function(self) return { fg = barbiered, bg = self.LineNr.bg } end,
 	debugBreakpoint = 'ErrorMsg',
 	debugPC         = 'ColorColumn',
 	LineNr          = { fg = dimgray },
@@ -141,36 +125,36 @@ local highlight_groups = {
 
 	--[[ 4.2.5. Folds]]
 	FoldColumn = { bg = dimgray, style = 'bold' },
-	Folded = { fg = text, bg = purple_light, style = 'italic' },
+	Folded = { fg = text, bg = wind, style = 'italic' },
 
 	--[[ 4.2.6. Diffs]]
-	DiffAdd    = { fg = text, bg = green_dark },
+	DiffAdd    = { fg = text, bg = darkolivegreen },
 	DiffChange = {},
-	DiffDelete = function(self) return { fg = self.DiffAdd.fg, bg = red } end,
-	DiffText   = function(self) return { fg = self.DiffAdd.fg, bg = yellow } end,
+	DiffDelete = function(self) return { fg = self.DiffAdd.fg, bg = indianred } end,
+	DiffText   = function(self) return { fg = self.DiffAdd.fg, bg = gold } end,
 
 	--[[ 4.2.7. Searching]]
 	IncSearch  = { style = 'inverse' },
-	MatchParen = { fg = green, style = { 'bold', 'underline' } },
+	MatchParen = { fg = seagreen, style = { 'bold', 'underline' } },
 	Search     = { style = { 'underline', color = mystery } },
 
 	--[[ 4.2.8. Spelling]]
-	SpellBad   = { style = { 'undercurl', color = red } },
-	SpellCap   = { style = { 'undercurl', color = yellow } },
-	SpellLocal = { style = { 'undercurl', color = green } },
-	SpellRare  = { style = { 'undercurl', color = orange } },
+	SpellBad   = { style = { 'undercurl', color = indianred } },
+	SpellCap   = { style = { 'undercurl', color = gold } },
+	SpellLocal = { style = { 'undercurl', color = seagreen } },
+	SpellRare  = { style = { 'undercurl', color = gold } },
 
 	--[[ 4.2.9. Conditional Column Highlighting]]
 	ColorColumn = { style = 'inverse' },
 	SignColumn  = {},
 
 	--[[ 4.2.10. Messages]]
-	ErrorMsg   = { fg = red, style = 'bold' },
-	HintMsg    = { fg = magenta, style = 'italic' },
-	InfoMsg    = { fg = pink_light, style = 'italic' },
-	ModeMsg    = { fg = yellow },
-	WarningMsg = { fg = orange, style = 'bold' },
-	Question   = { fg = orange_light, style = 'underline' },
+	ErrorMsg   = { fg = indianred, style = 'bold' },
+	HintMsg    = { fg = plum, style = 'italic' },
+	InfoMsg    = { fg = barbiered, style = 'italic' },
+	ModeMsg    = { fg = gold },
+	WarningMsg = { fg = gold, style = 'bold' },
+	Question   = { fg = sun, style = 'underline' },
 
 	--[[ 4.2.11. LSP / Diagnostics ]]
 	DiagnosticError = 'Error',
@@ -189,10 +173,10 @@ local highlight_groups = {
 	DiagnosticFloatingInfo = 'InfoMsg',
 	DiagnosticSignInfo = 'DiagnosticFloatingInfo',
 
-	DiagnosticUnderlineError = { style = { 'undercurl', color = red } },
-	DiagnosticUnderlineHint  = { style = { 'undercurl', color = magenta } },
-	DiagnosticUnderlineInfo  = { style = { 'undercurl', color = pink_light } },
-	DiagnosticUnderlineWarn  = { style = { 'undercurl', color = orange } },
+	DiagnosticUnderlineError = { style = { 'undercurl', color = indianred } },
+	DiagnosticUnderlineHint  = { style = { 'undercurl', color = plum } },
+	DiagnosticUnderlineInfo  = { style = { 'undercurl', color = barbiered } },
+	DiagnosticUnderlineWarn  = { style = { 'undercurl', color = gold } },
 
 	LspDiagnosticsDefaultError = 'DiagnosticError',
 	LspDiagnosticsFloatingError = 'DiagnosticFloatingError',
@@ -221,7 +205,7 @@ local highlight_groups = {
 	CursorColumn = { bg = highlightlow },
 
 	--[[ 4.2.13. Misc ]]
-	Directory = { fg = ice, style = 'bold' },
+	Directory = { fg = lightseagreen, style = 'bold' },
 
 	--[[ 4.3. Programming Languages
 		Everything in this section is OPTIONAL. Feel free to remove everything
@@ -405,12 +389,12 @@ local highlight_groups = {
 	--[[ 4.3.13. Markdown ]]
 	markdownCode              = 'mkdCode',
 	markdownCodeDelimiter     = 'mkdCodeDelimiter',
-	markdownH1                = { fg = red, style = 'bold' },
-	markdownH2                = { fg = orange, style = 'bold' },
-	markdownH3                = { fg = yellow, style = 'bold' },
-	markdownH4                = { fg = green_dark, style = 'bold' },
-	markdownH5                = { fg = cyan, style = 'bold' },
-	markdownH6                = { fg = purple_light, style = 'bold' },
+	markdownH1                = { fg = indianred, style = 'bold' },
+	markdownH2                = { fg = gold, style = 'bold' },
+	markdownH3                = { fg = gold, style = 'bold' },
+	markdownH4                = { fg = darkolivegreen, style = 'bold' },
+	markdownH5                = { fg = cadetblue, style = 'bold' },
+	markdownH6                = { fg = wind, style = 'bold' },
 	markdownLinkDelimiter     = 'mkdDelimiter',
 	markdownLinkText          = 'mkdLink',
 	markdownLinkTextDelimiter = 'markdownLinkDelimiter',
@@ -636,10 +620,10 @@ local highlight_groups = {
 	JumpMotion = 'EasyMotion',
 
 	--[[ 4.4.4. vim-gitgutter / vim-signify / gitsigns.nvim ]]
-	GitGutterAdd          = { fg = green },
-	GitGutterChange       = { fg = yellow },
-	GitGutterDelete       = { fg = red },
-	GitGutterChangeDelete = { fg = orange },
+	GitGutterAdd          = { fg = seagreen },
+	GitGutterChange       = { fg = gold },
+	GitGutterDelete       = { fg = indianred },
+	GitGutterChangeDelete = { fg = gold },
 
 	SignifySignAdd          = 'GitGutterAdd',
 	SignifySignChange       = 'GitGutterChange',
@@ -675,7 +659,7 @@ local highlight_groups = {
 	--[[ 4.4.9. barbar.nvim ]]
 	BufferCurrent       = 'TabLineSel',
 	BufferCurrentIndex  = function(self) return { fg = self.InfoMsg.fg, bg = self.BufferCurrent.bg } end,
-	BufferCurrentMod    = { fg = tan, bg = text, style = 'bold' },
+	BufferCurrentMod    = { fg = gold, bg = text, style = 'bold' },
 	BufferCurrentSign   = 'HintMsg',
 	BufferCurrentTarget = 'BufferCurrentSign',
 
@@ -723,14 +707,14 @@ local highlight_groups = {
 	TodoFgHACK = function(self) return { fg = self.Todo.bg } end,
 	TodoFgNOTE = 'HintMsg',
 	TodoFgPERF = 'InfoMsg',
-	TodoFgTODO = { fg = cyan, style = 'italic' },
+	TodoFgTODO = { fg = cadetblue, style = 'italic' },
 	TodoFgWARN = function(self) return { fg = self.WarningMsg.fg } end,
 
 	TodoBgFIX = function(self) return { fg = text, bg = self.ErrorMsg.fg, style = { 'bold', 'italic', 'nocombine' } } end,
 	TodoBgHACK = function(self) return { fg = text, bg = self.Todo.bg, style = { 'bold', 'italic', 'nocombine' } } end,
 	TodoBgNOTE = function(self) return { fg = text, bg = self.Hint.bg, style = { 'bold', 'italic', 'nocombine' } } end,
 	TodoBgPERF = function(self) return { fg = text, bg = self.Info.bg, style = { 'bold', 'italic', 'nocombine' } } end,
-	TodoBgTODO = { fg = black, bg = cyan, style = { 'bold', 'italic', 'nocombine' } },
+	TodoBgTODO = { fg = black, bg = cadetblue, style = { 'bold', 'italic', 'nocombine' } },
 	TodoBgWARN = function(self) return { fg = text, bg = self.Warning.bg, style = { 'bold', 'italic', 'nocombine' } } end,
 
 	TodoSignFIX  = 'TodoFgFIX',
@@ -777,16 +761,16 @@ local highlight_groups = {
 	packerPackageNotLoaded = 'Ignore',
 	packerStatusFail = 'Statement',
 	packerStatusSuccess = 'packerStatusFail',
-	packerSuccess = function(self) return { fg = green, style = self.packerFail.style } end,
+	packerSuccess = function(self) return { fg = seagreen, style = self.packerFail.style } end,
 
 	--[[ 4.4.18. nvim-tree ]]
 	NvimTreeGitDeleted = function(self) return { fg = self.DiffDelete.bg } end,
-	NvimTreeGitDirty = { fg = orange },
+	NvimTreeGitDirty = { fg = gold },
 	NvimTreeGitIgnored = 'Ignore',
 	NvimTreeGitMerge = 'NvimTreeGitRenamed',
 	NvimTreeGitNew = function(self) return { fg = self.DiffAdd.bg } end,
 	NvimTreeGitRenamed = function(self) return { fg = self.DiffChange.bg } end,
-	NvimTreeGitStaged = { fg = cyan },
+	NvimTreeGitStaged = { fg = cadetblue },
 
 	--[[ 4.4.19. symbols-outline.nvim ]]
 	FocusedSymbol = {},
@@ -799,20 +783,20 @@ local highlight_groups = {
 
 local terminal_colors = {
 	[1]  = text,
-	[2]  = red_dark,
-	[3]  = green_dark,
-	[4]  = orange,
-	[5]  = blue,
-	[6]  = magenta_dark,
-	[7]  = teal,
+	[2]  = indianred,
+	[3]  = darkolivegreen,
+	[4]  = gold,
+	[5]  = cadetblue,
+	[6]  = orchid,
+	[7]  = cadetblue,
 	[8]  = dimgray,
 	[9]  = highlightlow,
-	[10] = red,
-	[11] = green,
-	[12] = yellow,
-	[13] = turqoise,
-	[14] = purple,
-	[15] = cyan,
+	[10] = indianred,
+	[11] = seagreen,
+	[12] = gold,
+	[13] = lightseagreen,
+	[14] = mystery,
+	[15] = cadetblue,
 	[16] = dimgray
 }
 
