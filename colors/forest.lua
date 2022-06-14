@@ -9,7 +9,7 @@
 
 vim.g.colors_name = 'forest'
 
-local black       = { '#505050', 235, 'black' }
+local text        = { '#505050', 235, 'black' }
 local gray        = { '#696969', 244, 'gray' }
 local gray_dark   = { '#D0D8D0', 236, 'darkgrey' }
 local gray_darker = { '#696969', 239, 'gray' }
@@ -103,10 +103,10 @@ local highlight_groups = {
 	Underlined = { fg = turqoise, style = 'underline' },
 	Ignore = { fg = gray },
 	Error = { fg = white, bg = red_dark, style = 'bold' },
-	Todo = { fg = black, bg = yellow, style = 'bold' },
-	Hint = { fg = black, bg = magenta, style = 'bold' },
-	Info = { fg = black, bg = pink_light, style = 'bold' },
-	Warning = { fg = black, bg = orange, style = 'bold' },
+	Todo = { fg = text, bg = yellow, style = 'bold' },
+	Hint = { fg = text, bg = magenta, style = 'bold' },
+	Info = { fg = text, bg = pink_light, style = 'bold' },
+	Warning = { fg = text, bg = orange, style = 'bold' },
 
 	--[[ 4.2... Editor UI  ]]
 	--[[ 4.2.1. Status Line]]
@@ -118,7 +118,7 @@ local highlight_groups = {
 	--[[ 4.2.2. Separators]]
 	FloatBorder = { fg = gray },
 	TabLine = function(self) return { fg = highlight_group_normal.fg, bg = self.StatusLine.bg } end,
-	TabLineFill = function(self) return { fg = self.TabLine.bg, bg = black } end,
+	TabLineFill = function(self) return { fg = self.TabLine.bg, bg = text } end,
 	TabLineSel = function(self) return { fg = self.TabLine.fg, bg = highlight_group_normal.bg } end,
 	Title = { style = 'bold' },
 	VertSplit = { fg = white },
@@ -137,16 +137,16 @@ local highlight_groups = {
 	--[[ 4.2.4. Popup Menu]]
 	Pmenu      = { fg = highlight_group_normal.fg, bg = gray_dark },
 	PmenuSbar  = { bg = gray_darker },
-	PmenuSel   = { fg = black, bg = gray_light },
+	PmenuSel   = { fg = text, bg = gray_light },
 	PmenuThumb = { bg = white },
 	WildMenu   = 'PmenuSel',
 
 	--[[ 4.2.5. Folds]]
 	FoldColumn = { bg = gray_darker, style = 'bold' },
-	Folded = { fg = black, bg = purple_light, style = 'italic' },
+	Folded = { fg = text, bg = purple_light, style = 'italic' },
 
 	--[[ 4.2.6. Diffs]]
-	DiffAdd    = { fg = black, bg = green_dark },
+	DiffAdd    = { fg = text, bg = green_dark },
 	DiffChange = {},
 	DiffDelete = function(self) return { fg = self.DiffAdd.fg, bg = red } end,
 	DiffText   = function(self) return { fg = self.DiffAdd.fg, bg = yellow } end,
@@ -677,7 +677,7 @@ local highlight_groups = {
 	--[[ 4.4.9. barbar.nvim ]]
 	BufferCurrent       = 'TabLineSel',
 	BufferCurrentIndex  = function(self) return { fg = self.InfoMsg.fg, bg = self.BufferCurrent.bg } end,
-	BufferCurrentMod    = { fg = tan, bg = black, style = 'bold' },
+	BufferCurrentMod    = { fg = tan, bg = text, style = 'bold' },
 	BufferCurrentSign   = 'HintMsg',
 	BufferCurrentTarget = 'BufferCurrentSign',
 
@@ -728,12 +728,12 @@ local highlight_groups = {
 	TodoFgTODO = { fg = cyan, style = 'italic' },
 	TodoFgWARN = function(self) return { fg = self.WarningMsg.fg } end,
 
-	TodoBgFIX = function(self) return { fg = black, bg = self.ErrorMsg.fg, style = { 'bold', 'italic', 'nocombine' } } end,
-	TodoBgHACK = function(self) return { fg = black, bg = self.Todo.bg, style = { 'bold', 'italic', 'nocombine' } } end,
-	TodoBgNOTE = function(self) return { fg = black, bg = self.Hint.bg, style = { 'bold', 'italic', 'nocombine' } } end,
-	TodoBgPERF = function(self) return { fg = black, bg = self.Info.bg, style = { 'bold', 'italic', 'nocombine' } } end,
+	TodoBgFIX = function(self) return { fg = text, bg = self.ErrorMsg.fg, style = { 'bold', 'italic', 'nocombine' } } end,
+	TodoBgHACK = function(self) return { fg = text, bg = self.Todo.bg, style = { 'bold', 'italic', 'nocombine' } } end,
+	TodoBgNOTE = function(self) return { fg = text, bg = self.Hint.bg, style = { 'bold', 'italic', 'nocombine' } } end,
+	TodoBgPERF = function(self) return { fg = text, bg = self.Info.bg, style = { 'bold', 'italic', 'nocombine' } } end,
 	TodoBgTODO = { fg = black, bg = cyan, style = { 'bold', 'italic', 'nocombine' } },
-	TodoBgWARN = function(self) return { fg = black, bg = self.Warning.bg, style = { 'bold', 'italic', 'nocombine' } } end,
+	TodoBgWARN = function(self) return { fg = text, bg = self.Warning.bg, style = { 'bold', 'italic', 'nocombine' } } end,
 
 	TodoSignFIX  = 'TodoFgFIX',
 	TodoSignHACK = 'TodoFgHACK',
@@ -800,7 +800,7 @@ local highlight_groups = {
 
 
 local terminal_colors = {
-	[1]  = black,
+	[1]  = text,
 	[2]  = red_dark,
 	[3]  = green_dark,
 	[4]  = orange,
