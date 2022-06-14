@@ -55,7 +55,7 @@ local highlight_groups = {
 	Repeat      = { fg = lightseagreen, style = 'italic' },
 	Label       = { fg = barbiered, style = 'bold' },
 	Operator    = { fg = seagreen, style = 'bold' },
-	Keyword     = { fg = lightseagreen, style = 'bold' },
+	Keyword     = { fg = gold, style = 'bold' },
 	Exception   = { fg = barbiered, style = 'bold' },
 	Noise       = 'Delimiter',
 
