@@ -19,30 +19,30 @@ local white       = { '#9B92CF', 231, 'white' }
 local tan = { '#D8A838', 221, 'yellow' }
 
 local red       = { '#BE5555', 203, 'red' }
-local red_dark  = { '##cd5c5c', 124, 'darkred' }
-local red_light = { '#e4a9a9', 205, 'red' }
+local red_dark  = { '#CD5C5C', 124, 'darkred' }
+local red_light = { '#E4A9A9', 205, 'red' }
 
 local orange       = { '#D8A838', 208, 'darkyellow' }
 local orange_light = { '#e1bd67', 214, 'darkyellow' }
 
 local yellow = { '#daa520', 227, 'yellow' }
 
-local green_dark  = { '#556b2f', 113, 'darkgreen' }
-local green       = { '#2e8b57', 46, 'green' }
-local green_light = { '#8db14f', 120, 'green' }
-local turqoise    = { '#61bfb5', 48, 'green' }
+local green_dark  = { '#556B2F', 113, 'darkgreen' }
+local green       = { '#2E8B57', 46, 'green' }
+local green_light = { '#8DB14F', 120, 'green' }
+local turqoise    = { '#61BFB5', 48, 'green' }
 
-local blue = { '#6495ed', 63, 'darkblue' }
-local cyan = { '#61bfb5', 80, 'cyan' }
-local ice  = { '#61bfb5', 111, 'cyan' }
-local teal = { '#6495ed', 75, 'blue' }
+local blue = { '#6495ED', 63, 'darkblue' }
+local cyan = { '#61BFB5', 80, 'cyan' }
+local ice  = { '#61BFB5', 111, 'cyan' }
+local teal = { '#6495ED', 75, 'blue' }
 
 local magenta      = { '#DDA0DD', 168, 'magenta' }
-local magenta_dark = { '#da70d6', 126, 'darkmagenta' }
-local pink         = { '#e4a9a9', 219, 'magenta' }
-local pink_light   = { '#e4a9a9', 217, 'white' }
-local purple       = { '#9b92cf', 171, 'magenta' }
-local purple_light = { '#bbb5df', 133, 'darkmagenta' }
+local magenta_dark = { '#DA70D6', 126, 'darkmagenta' }
+local pink         = { '#E4A9A9', 219, 'magenta' }
+local pink_light   = { '#E4A9A9', 217, 'white' }
+local purple       = { '#9B92CF', 171, 'magenta' }
+local purple_light = { '#BBB5DF', 133, 'darkmagenta' }
 
 --[[ Step 4: highlights
 	You can define highlight groups like this:
