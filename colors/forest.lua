@@ -74,7 +74,7 @@ local turqoise    = { '#61bfb5', 48, 'green' }
 
 local blue = { '#6495ed', 63, 'darkblue' }
 local cyan = { '#61bfb5', 80, 'cyan' }
-local ice  = { '#b0e0e6', 111, 'cyan' }
+local ice  = { '#61bfb5', 111, 'cyan' }
 local teal = { '#87cefa', 75, 'blue' }
 
 local magenta      = { '#DDA0DD', 168, 'magenta' }
