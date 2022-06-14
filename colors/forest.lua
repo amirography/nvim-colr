@@ -80,7 +80,7 @@ local teal = { '#6495ed', 75, 'blue' }
 local magenta      = { '#DDA0DD', 168, 'magenta' }
 local magenta_dark = { '#da70d6', 126, 'darkmagenta' }
 local pink         = { '#e4a9a9', 219, 'magenta' }
-local pink_light   = { '#F0D0D0', 217, 'white' }
+local pink_light   = { '#e4a9a9', 217, 'white' }
 local purple       = { '#9b92cf', 171, 'magenta' }
 local purple_light = { '#bbb5df', 133, 'darkmagenta' }
 
