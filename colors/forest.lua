@@ -12,7 +12,6 @@ vim.g.colors_name = 'forest'
 local text        = { '#505050', 235, 'black' }
 local dimgray        = { '#696969', 244, 'gray' }
 local gray_dark   = { '#D0D8D0', 236, 'darkgrey' }
-local gray_darker = { '#696969', 239, 'gray' }
 local gray_light  = { '#696969', 250, 'gray' }
 local white       = { '#9B92CF', 231, 'white' }
 
@@ -51,7 +50,7 @@ local highlight_group_normal = { fg = gray_light }
 local highlight_groups = {
 	--[[ 4.1. Text Analysis ]]
 	Comment     = { fg = dimgray, style = 'italic' },
-	NonText     = { fg = gray_darker },
+	NonText     = { fg = dimgray },
 	EndOfBuffer = 'NonText',
 	Whitespace  = 'NonText',
 
@@ -110,7 +109,7 @@ local highlight_groups = {
 
 	--[[ 4.2... Editor UI  ]]
 	--[[ 4.2.1. Status Line]]
-	StatusLine = { fg = green_light, bg = gray_darker },
+	StatusLine = { fg = green_light, bg = dimgray },
 	StatusLineNC = function(self) return { fg = dimgray, bg = self.StatusLine.bg } end,
 	StatusLineTerm = 'StatusLine',
 	StatusLineTermNC = 'StatusLineNC',
@@ -132,17 +131,17 @@ local highlight_groups = {
 	LineNr          = { fg = dimgray },
 	QuickFixLine    = function(self) return { bg = self.StatusLine.bg } end,
 	Visual          = { style = 'inverse' },
-	VisualNOS       = { bg = gray_darker },
+	VisualNOS       = { bg = dimgray },
 
 	--[[ 4.2.4. Popup Menu]]
 	Pmenu      = { fg = highlight_group_normal.fg, bg = gray_dark },
-	PmenuSbar  = { bg = gray_darker },
+	PmenuSbar  = { bg = dimgray },
 	PmenuSel   = { fg = text, bg = gray_light },
 	PmenuThumb = { bg = white },
 	WildMenu   = 'PmenuSel',
 
 	--[[ 4.2.5. Folds]]
-	FoldColumn = { bg = gray_darker, style = 'bold' },
+	FoldColumn = { bg = dimgray, style = 'bold' },
 	Folded = { fg = text, bg = purple_light, style = 'italic' },
 
 	--[[ 4.2.6. Diffs]]
@@ -653,7 +652,7 @@ local highlight_groups = {
 	GitSignsDelete = 'GitGutterDelete',
 
 	--[[ 4.4.5. vim-indent-guides ]]
-	IndentGuidesOdd  = { bg = gray_darker },
+	IndentGuidesOdd  = { bg = dimgray },
 	IndentGuidesEven = { bg = dimgray },
 
 	--[[ 4.4.7. NERDTree ]]
