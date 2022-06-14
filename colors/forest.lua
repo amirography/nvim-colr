@@ -53,7 +53,7 @@ local black       = { '#505050', 235, 'black' }
 local gray        = { '#B0A8A8', 244, 'gray' }
 local gray_dark   = { '#D0D8D0', 236, 'darkgrey' }
 local gray_darker = { '#7b7b71', 239, 'gray' }
-local gray_light  = { '#c0c0c0', 250, 'gray' }
+local gray_light  = { '#B0A8A8', 250, 'gray' }
 local white       = { '#E0E0E0', 231, 'white' }
 
 local tan = { '#D8A838', 221, 'yellow' }
@@ -75,7 +75,7 @@ local turqoise    = { '#61bfb5', 48, 'green' }
 local blue = { '#6495ed', 63, 'darkblue' }
 local cyan = { '#61bfb5', 80, 'cyan' }
 local ice  = { '#61bfb5', 111, 'cyan' }
-local teal = { '#87cefa', 75, 'blue' }
+local teal = { '#6495ed', 75, 'blue' }
 
 local magenta      = { '#DDA0DD', 168, 'magenta' }
 local magenta_dark = { '#da70d6', 126, 'darkmagenta' }
