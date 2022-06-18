@@ -4,6 +4,7 @@
 
 	Initially forked from vim-rnb, a Vim colorsheme template:
 	* Author:        Romain Lafourcade (https://github.com/romainl)
+
 	* Canonical URL: https://github.com/romainl/vim-rnb
 ]]
 
@@ -778,10 +779,10 @@ local highlight_groups = {
 	MiniJump = 'MiniJump2dSpot',
 
 	--[[ 4.4.21. mode.nvim ]]
-	ModesCopy = { bg = { '#f5c359', 159, 'darkwhite' } },
-	ModesDelete = { bg = { '#c75c6a', 159, 'darkwhite' } },
-	ModesInsert = { bg = { '#7801c5', 159, 'darkwhite' } },
-	ModesVisual = { bg = { '#c4a7e7', 159, 'darkwhite' } },
+	ModesCopy = { guibg = { '#f5c359', 159, 'darkwhite' } },
+	ModesDelete = { guibg = { '#c75c6a', 159, 'darkwhite' } },
+	ModesInsert = { guibg = { '#7801c5', 159, 'darkwhite' } },
+	ModesVisual = { guibg = { '#c4a7e7', 159, 'darkwhite' } },
 }
 
 
