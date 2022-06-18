@@ -28,6 +28,13 @@ local orchid         = { '#DA70D6', 176, 'darkmagenta' }
 
 -- This is the only highlight that must be defined separately.
 local highlight_group_normal = { fg = dimgray }
+local ModesCopy = { bg = '#f5c359' }
+
+local ModesDelete = { bg = '#c75c6a' }
+
+local ModesInsert = { bg = '#78ccc5' }
+
+local ModesVisual = { bg = '#c4a7e7' }
 
 -- This is where the rest of your highlights should go.
 local highlight_groups = {
@@ -714,7 +721,7 @@ local highlight_groups = {
 	TodoBgHACK = function(self) return { fg = text, bg = self.Todo.bg, style = { 'bold', 'italic', 'nocombine' } } end,
 	TodoBgNOTE = function(self) return { fg = text, bg = self.Hint.bg, style = { 'bold', 'italic', 'nocombine' } } end,
 	TodoBgPERF = function(self) return { fg = text, bg = self.Info.bg, style = { 'bold', 'italic', 'nocombine' } } end,
-	TodoBgTODO = { fg = black, bg = cadetblue, style = { 'bold', 'italic', 'nocombine' } },
+	TodoBgTODO = { fg = text, bg = cadetblue, style = { 'bold', 'italic', 'nocombine' } },
 	TodoBgWARN = function(self) return { fg = text, bg = self.Warning.bg, style = { 'bold', 'italic', 'nocombine' } } end,
 
 	TodoSignFIX  = 'TodoFgFIX',
