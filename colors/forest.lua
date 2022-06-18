@@ -778,10 +778,10 @@ local highlight_groups = {
 	MiniJump = 'MiniJump2dSpot',
 
 	--[[ 4.4.21. mode.nvim ]]
-	ModesCopy = { bg = {'#f5c359', 159, 'darkwhite'} },
-	ModesDelete = { bg ={'#c75c6a',159, 'darkwhite'}},
-	ModesInsert = { bg ={'#78ccc5',159, 'darkwhite'}},
-	ModesVisual = { bg ={'#c4a7e7',159, 'darkwhite'}},
+	ModesCopy = { bg = { '#f5c359', 159, 'darkwhite' } },
+	ModesDelete = { bg = { '#c75c6a', 159, 'darkwhite' } },
+	ModesInsert = { bg = { '#7801c5', 159, 'darkwhite' } },
+	ModesVisual = { bg = { '#c4a7e7', 159, 'darkwhite' } },
 }
 
 
