@@ -28,14 +28,6 @@ local orchid         = { '#DA70D6', 176, 'darkmagenta' }
 
 -- This is the only highlight that must be defined separately.
 local highlight_group_normal = { fg = dimgray }
-local ModesCopy = { bg = '#f5c359' }
-
-local ModesDelete = { bg = '#c75c6a' }
-
-local ModesInsert = { bg = '#78ccc5' }
-
-local ModesVisual = { bg = '#c4a7e7' }
-
 -- This is where the rest of your highlights should go.
 local highlight_groups = {
 	--[[ 4.1. Text Analysis ]]
@@ -784,6 +776,12 @@ local highlight_groups = {
 
 	--[[ 4.4.20. mini.nvim ]]
 	MiniJump = 'MiniJump2dSpot',
+
+	--[[ 4.4.21. mode.nvim ]]
+	ModesCopy = { bg = '#f5c359' },
+	ModesDelete = { bg = '#c75c6a' },
+	ModesInsert = { bg = '#78ccc5' },
+	ModesVisual = { bg = '#c4a7e7' },
 }
 
 
