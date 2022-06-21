@@ -20,12 +20,12 @@ local sun            = { '#E1BD67', 179, 'darkyellow' }
 local indianred      = { '#7a1f1f', 167, 'red' }
 local barbiered      = { '#A32929', 181, 'red' }
 local darkolivegreen = { '#004039', 58, 'darkgreen' }
-local seagreen       = { '#2E8B57', 29, 'green' }
+local seagreen       = { '#007366', 29, 'green' }
 local olivegarden    = { '#8DB14F', 107, 'green' }
-local cadetblue      = { '#5f9ea0', 73, 'darkblue' }
-local lightseagreen  = { '#61BFB5', 73, 'cyan' }
-local plum           = { '#DDA0DD', 176, 'magenta' }
-local orchid         = { '#DA70D6', 176, 'darkmagenta' }
+local cadetblue      = { '#004772', 73, 'darkblue' }
+local lightseagreen  = { '#0067A5', 73, 'cyan' }
+local plum           = { '#8d2488', 176, 'magenta' }
+local orchid         = { '#641a61', 176, 'darkmagenta' }
 
 -- This is the only highlight that must be defined separately.
 local highlight_group_normal = { fg = dimgray }
