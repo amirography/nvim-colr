@@ -11,7 +11,7 @@
 vim.g.colors_name = 'forest'
 
 local text           = { '#000000', 59, 'black' }
-local dimgray        = { '#505050', 242, 'brightblack' }
+local dimgray        = { '#707070', 242, 'brightblack' }
 local highlightlow   = { '#D0D8D0', 151, 'darkwhite' }
 local mystery        = { '#9B92CF', 140, 'darkwhite' }
 local wind           = { '#BBB5DF', 146, 'darkmagenta' }
