@@ -10,8 +10,8 @@
 
 vim.g.colors_name = 'forest'
 
-local text           = { '#505050', 59, 'black' }
-local dimgray        = { '#696969', 242, 'brightblack' }
+local text           = { '#000000', 59, 'black' }
+local dimgray        = { '#505050', 242, 'brightblack' }
 local highlightlow   = { '#D0D8D0', 151, 'darkwhite' }
 local mystery        = { '#9B92CF', 140, 'darkwhite' }
 local wind           = { '#BBB5DF', 146, 'darkmagenta' }
@@ -796,7 +796,7 @@ local terminal_colors = {
 	[6]  = orchid,
 	[7]  = cadetblue,
 	[8]  = dimgray,
-	[9]  = highlightlow,
+	[9]  = text,
 	[10] = indianred,
 	[11] = seagreen,
 	[12] = gold,
